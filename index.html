@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamsPyro Event Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Damion&family=Frank+Ruhl+Libre:wght@300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="images/logo.png" alt="DreamsPyro Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+  
+  
+    
+   <!-- Hero Section -->
+   <div class="hero-section">
+    <div class="hero-parallax"></div>
+    <div class="hero-container">
+      <p class="main-heading">Unleash Your Occasion With</p>
+      <h1 class="company-name">DreamsPyro Event Management</h1>
+      <p class="tagline">Your Occasion Will Be  Dream for Others</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+    
+  <section id="services" class="main-cards">
+    <div class="service-cards">
+        <div class="service-card" data-service="birthday" onclick="window.location.href='birthday.html'">
+            <img src="images/birthday1.png" alt="Birthday Service">
+            <h3>Birthday</h3>
+            <p class="service-description">Celebrate special moments with a personalized birthday party.</p>
+            <button class="animated-button">View Details</button>
+        </div>
+        <div class="service-card" data-service="wedding" onclick="window.location.href='wedding.html'">
+            <img src="images/wedding1.png" alt="Wedding Service">
+            <h3>Wedding</h3>
+            <p class="service-description">Make your big day unforgettable with our expert wedding services.</p>
+            <button class="animated-button">View Details</button>
+        </div>
+        <div class="service-card" data-service="special-entry" onclick="window.location.href='special-entry.html'">
+            <img src="images/special_entry4.png" alt="Special Entry Service">
+            <h3>Special Entry</h3>
+            <p class="service-description">Create a dramatic entry for your special occasion.</p>
+            <button class="animated-button">View Details</button>
+        </div>
+        <div class="service-card" data-service="baby-shower" onclick="window.location.href='baby-shower.html'">
+            <img src="images/babyshower1.png" alt="Baby Shower Service">
+            <h3>Baby Shower</h3>
+            <p class="service-description">Celebrate the arrival of a new life with a memorable baby shower.</p>
+            <button class="animated-button">View Details</button>
+        </div>
+        <div class="service-card" data-service="vidhii-mandap" onclick="window.location.href='vidhii-mandap.html'">
+            <img src="images/vidhi_mandap6.png" alt="Vidhii Mandap Service">
+            <h3>Vidhii Mandap</h3>
+            <p class="service-description">Traditional ceremonies with beautiful mandap setups.</p>
+            <button class="animated-button">View Details</button>
+        </div>
+    </div>
+  </section>
+  
+  
+  
+  <!--slidin images section -->
+  <section class="sliding_images">
+    <h2 class="section-title">Happy Memories</h2>
+    <p class="section-subtitle">Relive the joy and magic of your special days with our stunning decorations.</p>
+    <div class="slider-container">
+      <div class="slider" id="slider">
+        <div class="slide">
+          <img src="images/special_entry1.png" alt="Image 1">
+          <div class="caption">Cherish every smile and laughter with beautiful backdrops.</div>
+        </div>
+        <div class="slide">
+          <img src="images/special_entry4.png" alt="Image 2">
+          <div class="caption">Capture unforgettable moments in style.</div>
+        </div>
+        <div class="slide">
+          <img src="images/special_entry5.png" alt="Image 3">
+          <div class="caption">Every detail designed to make your memories magical.</div>
+        </div>
+        <div class="slide">
+          <img src="images/wedding5.png" alt="Image 4">
+          <div class="caption">Timeless elegance that adds sparkle to your events.</div>
+        </div>
+        <div class="slide">
+          <img src="images/special_entry6.png" alt="Image 5">
+          <div class="caption">A celebration full of happiness and warmth.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+  <section class="why-choose-us">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <p>We understand that your event is an investment. We're committed to maximizing your ROI by delivering exceptional value, creative solutions, and measurable results. Our strategic approach ensures that your event achieves its objectives and leaves a positive impact.</p>
+      <p>Planning an event can be overwhelming, We take the stress out of the process by handling every aspect. We listen closely to your vision, understand your goals, and tailor our services to create a truly unique and personalized event. From concept to completion, we're with you every step of the way, ensuring your event reflects your style and exceeds your expectations.</p>
+      <p class="tagline">We are bonded for providing services to you that truly succeed our vision: <strong>"Your occasion will be a dream for others!!"</strong></p>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+  
+    <!-- Contact Section -->
+     <footer id="contact">
+    <section class="contact_section">
+        <div class="contact_container">
+          <h2 class="contact_title">Get in Touch with Us!</h2>
+          <p class="contact_info">
+            <span><strong>Owner:</strong> Rohit Rokde</span>
+            <span><strong>Mobile:</strong> <a href="tel:+9146858366">9146858366</a></span>
+            <span><strong>Email:</strong> <a href="mailto:dreamspyroeventmanagement78@gmail.com">dreamspyroeventmanagement78@gmail.com</a></span>
+          </p>
+          <div class="social_icons">
+            <a href="https://wa.me/+9146858366" target="_blank" class="social_icon whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/dreams.pyro.event.management" target="_blank" class="social_icon facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/dreamspyroeventmanagement?igsh=NTc4MTIwNjQ2YQ==" target="_blank" class="social_icon instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social_icon twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </footer>
+</body>
+</html>
+      

@@ -1,0 +1,698 @@
+body {
+    margin: 0;
+    font-family: 'Frank Ruhl Libre', serif;
+    scroll-behavior: smooth;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #141414;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+/* Logo Styling */
+nav .logo img {
+  height: 60px; /* Increased logo size */
+  transition: transform 0.3s ease;
+}
+nav .logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+nav .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+nav .nav-links li {
+  position: relative;
+}
+nav .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+nav .nav-links a:hover {
+  color: #92dfe9;
+}
+nav .nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #85e4e4;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+nav .nav-links li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Mobile Menu */
+nav .menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  nav .nav-links.open {
+    height: 150px;
+  }
+  nav .menu-toggle {
+    display: block;
+  }
+}
+
+/* Hero Section */
+
+/* Hero Section Styles */
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Full-screen height */
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #1a1a1a, #00ffcc); /* Gradient background */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  scroll-behavior: smooth; /* Smooth scrolling for navigation */
+}
+
+/* Main Text Container */
+.hero-container {
+  padding: 20px 40px;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  position: relative;
+  background: linear-gradient(135deg, #1a1a1a, #00ffcc);
+  background-clip: padding-box;
+  box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.5);
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #00ffcc, #1a1a1a, #00ffcc, #1a1a1a);
+  border-radius: 15px;
+  z-index: -1;
+  animation: movingBorder 6s linear infinite;
+  background-size: 300%;
+}
+
+/* Active Border Animation */
+@keyframes movingBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main Heading */
+.main-heading {
+  font-size: 2rem; /* First line font size */
+  margin-bottom: 10px;
+  font-weight: 400; /* Subtle weight for elegance */
+}
+
+/* Company Name */
+.company-name {
+ 
+  font-size: 3rem; /* Larger font size for emphasis */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #a6cfc7; /* Highlighted color */
+  text-shadow: 0 0 10px #b9c4c4, 0 0 20px #c2d3d0, 0 0 30px #b5d3cd;
+  transition: transform 0.3s ease-in-out;
+}
+
+.company-name:hover {
+  transform: scale(1.05); /* Subtle scale effect on hover */
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9; /* Slight transparency for softer look */
+  font-family: 'Pacifico', cursive;
+}
+
+/* Background Parallax */
+.hero-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  transform: translateZ(-1px) scale(2);
+  animation: parallaxMove 30s linear infinite;
+}
+
+@keyframes parallaxMove {
+  from {
+    transform: translateZ(-1px) scale(2) translateY(-10%);
+  }
+  to {
+    transform: translateZ(-1px) scale(2) translateY(10%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    
+  }
+
+  .hero-container {
+    padding: 15px 25px;
+  }
+}
+
+
+/*service card section*/
+
+.main-cards {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .service-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Title and Description Styles */
+  .service-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .service-card .service-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  .animated-button {
+    background-color: #00ffcc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #00ffcc;
+  }
+  
+  .service-card:hover h3 {
+    color: white;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+  }
+  
+  .service-card:hover .service-description {
+    color: white;
+  }
+  
+  .service-card:hover .animated-button {
+    background-color: #008c8c;
+    transform: scale(1.1);
+  }
+  
+  .service-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Hover Animation for Text */
+  @keyframes glowText {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ffcc;
+    }
+    100% {
+      text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ffcc;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .service-card {
+      width: 280px;
+    }
+  
+    .animated-button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-cards {
+      gap: 20px;
+    }
+  
+    .service-card {
+      width: 240px;
+    }
+  
+    .animated-button {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-cards {
+      gap: 15px;
+    }
+  
+    .service-card {
+      width: 100%;
+    }
+  
+    .animated-button {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+/*sliding images*/
+.sliding_images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #00ffcc);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  width: 90%;
+  max-width: 900px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  width: 80%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slider-container {
+    height: 350px;
+  }
+
+  .caption {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/*why choose us section */
+/* Why Choose Us Section */
+.why-choose-us {
+  background: linear-gradient(135deg, #1a1a1a, #00ffcc); /* Gradient background as per your preference */
+  padding: 60px 30px;
+  text-align: center;
+  color: #fff; /* White text for contrast on dark background */
+}
+
+.why-choose-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-choose-us h2 {
+  font-size: 3rem; /* Increased font size for the heading */
+  font-weight: bold;
+  color: #fff; /* White color for the heading */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.why-choose-us p {
+  font-size: 1.2rem; /* Increased font size for paragraphs */
+  font-weight: 600; /* Made the paragraph text slightly bolder */
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #fff; /* White text */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-choose-us .tagline {
+  font-size: 1.5rem; /* Larger font size for the tagline */
+  font-weight: 700; /* Made the tagline text bolder */
+  color: #fbffff; /* Brand color for the tagline to make it stand out */
+  margin-top: 30px;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+.why-choose-us strong {
+  color: #0d0e0d; /* Highlight the quote with your brand color */
+  font-weight: bold;
+  font-family: 'Lobster Two', cursive;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-choose-us h2 {
+    font-size: 2.2rem; /* Slightly smaller heading on mobile */
+  }
+
+  .why-choose-us p {
+    font-size: 1.1rem; /* Slightly smaller text on mobile */
+  }
+
+  .why-choose-us .tagline {
+    font-size: 1.3rem; /* Smaller tagline on mobile */
+  }
+}
+
+
+
+
+/* Contact Section */
+/* Background gradient matching sliding mechanism */
+.contact_section {
+    background: linear-gradient(to bottom, #001f3f, #00a19d);
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .contact_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact_title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .contact_info {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact_info span {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .contact_info a {
+    color: #00a19d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact_info a:hover {
+    color: #fff;
+  }
+  
+  .social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social_icon {
+    font-size: 2rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effects for social icons */
+  .social_icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Set original colors for icons */
+  .social_icon.whatsapp i {
+    color: #25D366; /* WhatsApp green */
+  }
+  
+  .social_icon.facebook i {
+    color: #1877F2; /* Facebook blue */
+  }
+  
+  .social_icon.instagram i {
+    background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+    color: transparent;
+  }
+  
+  .social_icon.instagram i {
+    background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+    -webkit-background-clip: text; /* Ensures the gradient applies to the text */
+    -webkit-text-fill-color: transparent; /* Makes the background visible through the text */
+    color: inherit; /* In case the above isn't supported */
+  }
+  
+  .social_icon.twitter i {
+    color: #1DA1F2; /* Twitter blue */
+  }
+  
+  /* Keyframe animations for hovering effects */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.2); opacity: 1; }
+  }
+  
+  @keyframes swing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* Animation effects for specific icons */
+  .social_icon.whatsapp:hover {
+    animation: bounce 1s infinite;
+  }
+  
+  .social_icon.facebook:hover {
+    animation: rotate 1s infinite;
+  }
+  
+  .social_icon.instagram:hover {
+    animation: zoomIn 1s ease-in-out;
+  }
+  
+  .social_icon.twitter:hover {
+    animation: swing 1s ease-in-out;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .contact_title {
+      font-size: 2rem;
+    }
+  
+    .contact_info {
+      font-size: 1rem;
+    }
+  
+    .social_icon {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact_title {
+      font-size: 1.8rem;
+    }
+  
+    .contact_info {
+      font-size: 0.9rem;
+    }
+  
+    .social_icon {
+      font-size: 1.2rem;
+    }
+  }
+  
